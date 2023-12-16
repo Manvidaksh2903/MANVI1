@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Events Demo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+    button {
+      margin: 10px;
+      padding: 8px 16px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<h1>JavaScript Events Demo</h1>
+
+<button id="clickButton">Click Me</button>
+<p id="output"></p>
+
+<script>
+  // Function to handle the click event
+  function handleClick() {
+    const outputElement = document.getElementById('output');
+    outputElement.innerHTML = 'Button Clicked!';
+  }
+
+  // Get the button element by its ID
+  const clickButton = document.getElementById('clickButton');
+
+  // Attach a click event listener to the button
+  clickButton.addEventListener('click', handleClick);
+
+  // Additional events for demonstration
+  clickButton.addEventListener('mouseover', function() {
+    this.style.backgroundColor = 'lightblue';
+  });
+
+  clickButton.addEventListener('mouseout', function() {
+    this.style.backgroundColor = '';
+  });
+
+  // Keydown event
+  document.addEventListener('keydown', function(event) {
+    console.log('Key Pressed:', event.key);
+  });
+
+  // Change event for input
+  const inputElement = document.createElement('input');
+  inputElement.setAttribute('type', 'text');
+  inputElement.addEventListener('change', function() {
+    console.log('Input Changed:', this.value);
+  });
+
+  document.body.appendChild(inputElement);
+</script>
+
+</body>
+</html>
