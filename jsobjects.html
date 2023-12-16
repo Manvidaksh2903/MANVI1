@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Objects Demo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+<h1>JavaScript Objects Demo</h1>
+
+<script>
+  // Creating an object
+  const person = {
+    firstName: 'John',
+    lastName: 'Doe',
+    age: 30,
+    email: 'john@example.com',
+
+    // Method to get full name
+    getFullName: function() {
+      return this.firstName + ' ' + this.lastName;
+    },
+
+    // Method to increase age
+    celebrateBirthday: function() {
+      this.age++;
+      return 'Happy Birthday! 🎉 Now ' + this.firstName + ' is ' + this.age + ' years old.';
+    }
+  };
+
+  // Displaying object properties
+  document.write('<p><strong>Person Object:</strong></p>');
+  document.write('<p>First Name: ' + person.firstName + '</p>');
+  document.write('<p>Last Name: ' + person.lastName + '</p>');
+  document.write('<p>Age: ' + person.age + '</p>');
+  document.write('<p>Email: ' + person.email + '</p>');
+
+  // Calling object methods
+  document.write('<p><strong>Object Methods:</strong></p>');
+  document.write('<p>Full Name: ' + person.getFullName() + '</p>');
+  document.write('<p>' + person.celebrateBirthday() + '</p>');
+  document.write('<p>New Age: ' + person.age + '</p>');
+
+  // Adding a new property
+  person.city = 'New York';
+  document.write('<p><strong>Updated Object:</strong></p>');
+  document.write('<p>City: ' + person.city + '</p>');
+
+</script>
+
+</body>
+</html>
