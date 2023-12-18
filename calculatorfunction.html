@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    First name<br>
+    <input type="text" id="firstname" value="2">
+    <br>
+    Last Name:<br>
+    <input type="text" id="lastname" value="3">
+    <br><br>
+    <input type="submit" onclick="myadd(4,3)">
+    <p id="add">df</p>
+    <input type="submit" onclick="mymul(4,3)">
+    <p id="mul">df</p>
+    <input type="submit" onclick="mysub(4,3)">
+    <p id="sub">df</p>
+    <input type="submit" onclick="mydiv(4,3)">
+    <p id="div">df</p>
+    
+    
+    
+
+    <script>
+        function myadd(p1,p2)
+        { 
+           const num1= parseInt(prompt('enter the first number'));
+
+         // var num1=parseInt(document.getElementById("firstname").value);
+           const num2=parseInt(prompt('enter the second numbe'));
+           //var num2=parseInt(document.getElementById("lastname").value);
+            const sum=num1+num2;
+            document.getElementById("add").innerHTML=sum;
+        }
+        function mymul(p1,p2)
+        { 
+            const num1= parseInt(prompt('enter the first number'));
+
+         // var num1=parseInt(document.getElementById("firstname").value);
+           const num2=parseInt(prompt('enter the second number'));
+          // var num2=parseInt(document.getElementById("lastname").value);
+            const mul=num1*num2;
+            document.getElementById("mul").innerHTML=mul;
+        }
+        function mysub(p1,p2)
+        { 
+           // const num1= parseInt(prompt('enter the first number'));
+
+          var num1=parseInt(document.getElementById("firstname").value);
+           // const num2=parseInt(prompt('enter the second number'));
+           var num2=parseInt(document.getElementById("lastname").value);
+            const sub=num1-num2;
+            document.getElementById("sub").innerHTML=sub;
+        }
+        function mydiv(p1,p2)
+        { 
+           // const num1= parseInt(prompt('enter the first number'));
+
+          var num1=parseInt(document.getElementById("firstname").value);
+           // const num2=parseInt(prompt('enter the second number'));
+           var num2=parseInt(document.getElementById("lastname").value);
+            const div=num1/num2;
+            document.getElementById("div").innerHTML=div;
+        }
+    </script>
+</body>
+</html>
